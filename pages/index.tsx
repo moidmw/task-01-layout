@@ -5,6 +5,7 @@ import ProgramItem from "../components/programItem";
 import Button from "../components/button";
 import { programItems, ourClasses } from "../constants/programItems";
 import SectionHeader from "../components/sectionHeader";
+import Header from "../components/sectionHeader/heading";
 
 const HomePage = () => {
   return (
@@ -83,6 +84,14 @@ const HomePage = () => {
               sizes="100vw"
               className="w-full h-auto"
             />
+            <Header text="First Training Class" />
+            <p className="my-4 font-extralight max-w-md mx-auto">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+              delectus unde at accusantium optio perspiciatis deserunt. Ratione,
+              iure praesentium tempora similique ut voluptatum doloremque nisi
+              est aperiam quas architecto repellat!
+            </p>
+            <Button text="View schedule" />
           </div>
         </div>
       </Section>
