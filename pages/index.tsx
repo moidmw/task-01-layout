@@ -3,7 +3,13 @@ import Image from "next/image";
 import Section from "../components/section";
 import ProgramItem from "../components/programItem";
 import Button from "../components/button";
-import { programItems, ourClasses } from "../constants/programItems";
+import {
+  programItems,
+  ourClasses,
+  days,
+  schedule,
+  trainer,
+} from "../constants/programItems";
 import SectionHeader from "../components/sectionHeader";
 import Header from "../components/sectionHeader/heading";
 
@@ -104,6 +110,14 @@ const HomePage = () => {
           }
           subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem nostrum, deserunt eum dolor delectus."
         />
+        <div>
+          {days.map((item) => (
+            <div key={item}>
+              {item}
+              <span className="last:hidden">/</span>
+            </div>
+          ))}
+        </div>
       </Section>
       <Section>
         <SectionHeader
