@@ -5,16 +5,7 @@ import SectionHeading from "../components/sectionHeading";
 import ProgramItem from "../components/programItem";
 import Button from "../components/button";
 import { programItems } from "../constants/programItems";
-
-const BorderImg = () => (
-  <Image
-    className="mx-auto"
-    src="https://altcampus.github.io/training-studio/assets/media/line-dec.png"
-    alt="border"
-    width={45}
-    height={15}
-  />
-);
+import SectionHeader from "../components/sectionHeader";
 
 const HomePage = () => {
   return (
@@ -31,14 +22,15 @@ const HomePage = () => {
         <Button text="BECOME A MEMBER" />
       </Section>
       <Section>
-        <SectionHeading className="mb-4">
-          Choose <span className="text-orange-700">Program</span>
-        </SectionHeading>
-        <BorderImg />
-        <p className="my-4 font-extralight max-w-md mx-auto">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
-          rem nostrum, deserun dolor delectus.
-        </p>
+        <SectionHeader
+          heading={
+            <>
+              Choose <span className="text-orange-700">Program</span>
+            </>
+          }
+          subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+          rem nostrum, deserun dolor delectus."
+        />
         <div className="flex flex-row flex-wrap">
           {programItems.map((item, index) => {
             return (
@@ -53,16 +45,30 @@ const HomePage = () => {
         </div>
       </Section>
       <Section>
-        <SectionHeading>
-          Don&apos;t <span className="text-orange-700">Think</span>, Begin{" "}
-          <span className="text-orange-700">Today</span>
-        </SectionHeading>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
+        <SectionHeader
+          heading={
+            <>
+              Don&apos;t <span className="text-orange-700">Think</span>, Begin{" "}
+              <span className="text-orange-700">Today</span>
+            </>
+          }
+          subHeading="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
           provident dolores? Iste illo, aperiam sit dolore quis, nobis
-          laudantium. Lorem ipsum dolor sit amet.
-        </p>
+          laudantium. Lorem ipsum dolor sit amet."
+        />
         <Button text="Become a member" />
+      </Section>
+      <Section>
+      <SectionHeader
+          heading={
+            <>
+              Our <span className="text-orange-700">Classes</span>
+            </>
+          }
+          subHeading="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
+          provident dolores? Iste illo, aperiam sit dolore quis, nobis
+          laudantium. Lorem ipsum dolor sit amet."
+        />
       </Section>
     </>
   );
