@@ -1,8 +1,9 @@
 import Head from "next/head";
+import Image from "next/image";
 import Section from "../components/section";
 import ProgramItem from "../components/programItem";
 import Button from "../components/button";
-import { programItems } from "../constants/programItems";
+import { programItems, ourClasses } from "../constants/programItems";
 import SectionHeader from "../components/sectionHeader";
 
 const HomePage = () => {
@@ -67,6 +68,21 @@ const HomePage = () => {
           provident dolores? Iste illo, aperiam sit dolore quis, nobis
           laudantium. Lorem ipsum dolor sit amet."
         />
+        <div>
+          <div>
+            {ourClasses.map((item, index) => {
+              return <div key={index}>{item}</div>;
+            })}
+          </div>
+          <div>
+            <Image
+              src="https://altcampus.github.io/training-studio/assets/media/training-image-01.jpg"
+              alt="training image"
+              width="100"
+              height="100"
+            />
+          </div>
+        </div>
       </Section>
       <Section>
         <SectionHeader
