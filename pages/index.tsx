@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Section from "../components/section";
 import SectionHeading from "../components/sectionHeading";
+import ProgramItem from "../components/programItem";
+import { programItems } from "../constants/programItems";
 
 const BorderImg = () => (
   <Image
@@ -34,10 +36,22 @@ const HomePage = () => {
           Choose <span className="text-orange-700">Program</span>
         </SectionHeading>
         <BorderImg />
-        <p className="my-4 font-extralight max-w-md">
+        <p className="my-4 font-extralight max-w-md mx-auto">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
           rem nostrum, deserun dolor delectus.
         </p>
+        <div className="flex flex-row flex-wrap">
+          {programItems.map((item, index) => {
+            return (
+              <ProgramItem
+                key={index}
+                title={item.title}
+                description={item.description}
+                link={item.link}
+              />
+            );
+          })}
+        </div>
       </Section>
       <Section>
         <SectionHeading>
