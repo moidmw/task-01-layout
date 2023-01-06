@@ -1,4 +1,4 @@
-import SectionHeading from "../sectionHeading";
+import Heading from "./heading";
 import Image from "next/image";
 
 type Props = {
@@ -20,7 +20,7 @@ const SectionHeader = (props: Props) => {
   const { heading, subHeading } = props;
   return (
     <>
-      <SectionHeading className="mb-4">{heading}</SectionHeading>
+      <Heading className="mb-4">{heading}</Heading>
       <BorderImg />
       <p className="my-4 font-extralight max-w-md mx-auto">
         {subHeading}

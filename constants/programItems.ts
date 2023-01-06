@@ -36,3 +36,10 @@ export const programItems = [
     link: "Discover more",
   },
 ];
+
+export const ourClasses = [
+  "First Training Class",
+  "Second Training Class",
+  "Third Training Class",
+  "Forth Training Class",
+];

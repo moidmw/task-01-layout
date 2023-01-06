@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
 import Section from "../components/section";
-import SectionHeading from "../components/sectionHeading";
 import ProgramItem from "../components/programItem";
 import Button from "../components/button";
 import { programItems } from "../constants/programItems";
@@ -59,7 +57,7 @@ const HomePage = () => {
         <Button text="Become a member" />
       </Section>
       <Section>
-      <SectionHeader
+        <SectionHeader
           heading={
             <>
               Our <span className="text-orange-700">Classes</span>
@@ -68,6 +66,26 @@ const HomePage = () => {
           subHeading="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
           provident dolores? Iste illo, aperiam sit dolore quis, nobis
           laudantium. Lorem ipsum dolor sit amet."
+        />
+      </Section>
+      <Section>
+        <SectionHeader
+          heading={
+            <>
+              Classes <span className="text-orange-700">Schedule</span>
+            </>
+          }
+          subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem nostrum, deserunt eum dolor delectus."
+        />
+      </Section>
+      <Section>
+        <SectionHeader
+          heading={
+            <>
+              Expert <span className="text-orange-700">Trainer</span>
+            </>
+          }
+          subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem nostrum, deserunt eum dolor delectus."
         />
       </Section>
     </>
