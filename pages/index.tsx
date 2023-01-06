@@ -68,18 +68,20 @@ const HomePage = () => {
           provident dolores? Iste illo, aperiam sit dolore quis, nobis
           laudantium. Lorem ipsum dolor sit amet."
         />
-        <div>
-          <div>
+        <div className="flex flex-row w-full">
+          <div className="flex flex-col">
             {ourClasses.map((item, index) => {
               return <div key={index}>{item}</div>;
             })}
           </div>
-          <div>
+          <div className="w-full">
             <Image
               src="https://altcampus.github.io/training-studio/assets/media/training-image-01.jpg"
               alt="training image"
-              width="100"
-              height="100"
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="w-full h-auto"
             />
           </div>
         </div>
