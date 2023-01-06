@@ -3,6 +3,7 @@ import Image from "next/image";
 import Section from "../components/section";
 import SectionHeading from "../components/sectionHeading";
 import ProgramItem from "../components/programItem";
+import Button from "../components/button";
 import { programItems } from "../constants/programItems";
 
 const BorderImg = () => (
@@ -27,9 +28,7 @@ const HomePage = () => {
       <Section>
         <h3 className="text-xl font-bold">WORK HARDER, GET STRONGER</h3>
         <h2 className="text-7xl font-black pt-7 pb-9">EASY WITH OUT GYM</h2>
-        <button className="w-fit bg-white mx-auto px-5 py-4 font-medium">
-          BECOME A MEMBER
-        </button>
+        <Button text="BECOME A MEMBER" />
       </Section>
       <Section>
         <SectionHeading className="mb-4">
@@ -58,6 +57,12 @@ const HomePage = () => {
           Don&apos;t <span className="text-orange-700">Think</span>, Begin{" "}
           <span className="text-orange-700">Today</span>
         </SectionHeading>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
+          provident dolores? Iste illo, aperiam sit dolore quis, nobis
+          laudantium. Lorem ipsum dolor sit amet.
+        </p>
+        <Button text="Become a member" />
       </Section>
     </>
   );
