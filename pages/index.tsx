@@ -104,21 +104,45 @@ const HomePage = () => {
         </div>
       </Section>
       <Section>
-        <SectionHeader
-          heading={
-            <>
-              Classes <span className="text-orange-700">Schedule</span>
-            </>
-          }
-          subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem nostrum, deserunt eum dolor delectus."
-        />
-        <div className="flex flex-row justify-center">
-          {days.map((item) => (
-            <div key={item} className="group">
-              {item}
-              <span className="group-last:hidden mx-2">/</span>
-            </div>
-          ))}
+        <div>
+          <SectionHeader
+            heading={
+              <>
+                Classes <span className="text-orange-700">Schedule</span>
+              </>
+            }
+            subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem nostrum, deserunt eum dolor delectus."
+          />
+          <div className="flex flex-row justify-center">
+            {days.map((item) => (
+              <div key={item} className="group">
+                {item}
+                <span className="group-last:hidden mx-2">/</span>
+              </div>
+            ))}
+          </div>
+          <div>
+            <table className="table-fixed w-full mt-10">
+              {schedule.map((item, index) => {
+                return (
+                  <tr key={index} className="group">
+                    <td className="p-5 border-l border-slate-700 border-t border-r group-last:border-b">
+                      {item.type}
+                    </td>
+                    <td className="p-5 border-t border-slate-700 border-b border-r">
+                      {item.slot1}
+                    </td>
+                    <td className="p-5 border-t border-slate-700 border-b border-r">
+                      {item.slot2}
+                    </td>
+                    <td className="p-5 border-t border-slate-700 border-b border-r">
+                      {item.trainer}
+                    </td>
+                  </tr>
+                );
+              })}
+            </table>
+          </div>
         </div>
       </Section>
       <Section>
