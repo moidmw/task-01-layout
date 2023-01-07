@@ -65,39 +65,41 @@ const HomePage = () => {
         <Button text="Become a member" />
       </Section>
       <Section>
-        <SectionHeader
-          heading={
-            <>
-              Our <span className="text-orange-700">Classes</span>
-            </>
-          }
-          subHeading="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
+        <div>
+          <SectionHeader
+            heading={
+              <>
+                Our <span className="text-orange-700">Classes</span>
+              </>
+            }
+            subHeading="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
           provident dolores? Iste illo, aperiam sit dolore quis, nobis
           laudantium. Lorem ipsum dolor sit amet."
-        />
-        <div className="flex flex-row w-full">
-          <div className="flex flex-col">
-            {ourClasses.map((item, index) => {
-              return <div key={index}>{item}</div>;
-            })}
-          </div>
-          <div className="w-full">
-            <Image
-              src="https://altcampus.github.io/training-studio/assets/media/training-image-01.jpg"
-              alt="training image"
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="w-full h-auto"
-            />
-            <Header text="First Training Class" />
-            <p className="my-4 font-extralight max-w-md mx-auto">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
-              delectus unde at accusantium optio perspiciatis deserunt. Ratione,
-              iure praesentium tempora similique ut voluptatum doloremque nisi
-              est aperiam quas architecto repellat!
-            </p>
-            <Button text="View schedule" />
+          />
+          <div className="flex flex-row w-full">
+            <div className="flex flex-col">
+              {ourClasses.map((item, index) => {
+                return <div key={index}>{item}</div>;
+              })}
+            </div>
+            <div className="w-full">
+              <Image
+                src="https://altcampus.github.io/training-studio/assets/media/training-image-01.jpg"
+                alt="training image"
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-full h-auto"
+              />
+              <Header text="First Training Class" />
+              <p className="my-4 font-extralight max-w-md mx-auto">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+                delectus unde at accusantium optio perspiciatis deserunt.
+                Ratione, iure praesentium tempora similique ut voluptatum
+                doloremque nisi est aperiam quas architecto repellat!
+              </p>
+              <Button text="View schedule" />
+            </div>
           </div>
         </div>
       </Section>
@@ -110,11 +112,11 @@ const HomePage = () => {
           }
           subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem nostrum, deserunt eum dolor delectus."
         />
-        <div>
+        <div className="flex flex-row justify-center">
           {days.map((item) => (
-            <div key={item}>
+            <div key={item} className="group">
               {item}
-              <span className="last:hidden">/</span>
+              <span className="group-last:hidden mx-2">/</span>
             </div>
           ))}
         </div>
