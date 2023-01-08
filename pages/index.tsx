@@ -65,7 +65,7 @@ const HomePage = () => {
         <Button text="Become a member" />
       </Section>
       <Section>
-        <div>
+        <div className="w-full">
           <SectionHeader
             heading={
               <>
@@ -146,14 +146,35 @@ const HomePage = () => {
         </div>
       </Section>
       <Section>
-        <SectionHeader
-          heading={
-            <>
-              Expert <span className="text-orange-700">Trainer</span>
-            </>
-          }
-          subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem nostrum, deserunt eum dolor delectus."
-        />
+        <div className="w-full">
+          <SectionHeader
+            heading={
+              <>
+                Expert <span className="text-orange-700">Trainer</span>
+              </>
+            }
+            subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem nostrum, deserunt eum dolor delectus."
+          />
+          <div className="flex flex-row">
+            {trainer.map((item, index) => {
+              return (
+                <div key={index} className="flex basis-1/3 flex-col text-left bg-white p-6 m-5 rounded-lg shadow-sm">
+                  <Image
+                    src={item.profileImage}
+                    alt="training image"
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    className="w-full h-auto"
+                  />
+                  <p className="text-sm text-orange-700 mt-5">{item.type}</p>
+                  <p className="text-xl font-medium mb-3">{item.name}</p>
+                  <p className="text-sm font-light">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </Section>
     </>
   );
