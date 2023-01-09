@@ -24,7 +24,10 @@ jobs:
             echo '^^^The files in your repo^^^'
   say-bye:
     docker:
-      - image: cimp/base:stable
+      - image: cimg/base:stable
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD 
     steps:
       - checkout
       - run:
