@@ -17,6 +17,11 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      - run:
+          name: "Show files"
+          command: |
+            ls-al
+            echo 'the files from your repo'
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -24,3 +29,5 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+
+# VS Code Extension Version: 1.5.1
