@@ -22,6 +22,17 @@ jobs:
           command: |
             ls -al
             echo '^^^The files in your repo^^^'
+  say-bye:
+    docker:
+      - image: cimp/base:stable
+    steps:
+      - checkout
+      - run:
+          name: 'Say bye!!'
+          command: |
+            ll
+            echo 'this is another command'
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
