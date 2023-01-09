@@ -25,9 +25,6 @@ jobs:
   say-bye:
     docker:
       - image: cimg/base:stable
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD 
     steps:
       - checkout
       - run:
