@@ -19,13 +19,13 @@ const BorderImg = () => (
 const SectionHeader = (props: Props) => {
   const { heading, subHeading } = props;
   return (
-    <>
+    <div>
       <Heading className="mb-4">{heading}</Heading>
       <BorderImg />
       <p className="my-4 font-extralight max-w-md mx-auto">
         {subHeading}
       </p>
-    </>
+    </div>
   );
 };
 
