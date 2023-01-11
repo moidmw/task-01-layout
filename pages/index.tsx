@@ -22,12 +22,7 @@ const HomePage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <video
-        autoPlay
-        src="https://altcampus.github.io/training-studio/assets/media/gym-video.mp4"
-      />
-
-      <Section className="z-10">
+      <Section>
         <h3 className="text-xl font-bold">WORK HARDER, GET STRONGER</h3>
         <h2 className="text-7xl font-black pt-7 pb-9">EASY WITH OUT GYM</h2>
         <Button text="BECOME A MEMBER" />
@@ -163,10 +158,7 @@ const HomePage = () => {
           <div className="flex flex-row">
             {trainer.map((item, index) => {
               return (
-                <div
-                  key={index}
-                  className="flex basis-1/3 flex-col text-left bg-white p-6 m-5 rounded-lg shadow-sm"
-                >
+                <div key={index} className="flex basis-1/3 flex-col text-left bg-white p-6 m-5 rounded-lg shadow-sm">
                   <Image
                     src={item.profileImage}
                     alt="training image"
