@@ -22,16 +22,23 @@ const HomePage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <video
-        autoPlay
-        src="https://altcampus.github.io/training-studio/assets/media/gym-video.mp4"
-      />
-
-      <Section className="z-10">
-        <h3 className="text-xl font-bold">WORK HARDER, GET STRONGER</h3>
-        <h2 className="text-7xl font-black pt-7 pb-9">EASY WITH OUT GYM</h2>
-        <Button text="BECOME A MEMBER" />
-      </Section>
+      <div className="bg-white relative">
+        <video
+          autoPlay
+          muted
+          loop
+          src="https://altcampus.github.io/training-studio/assets/media/gym-video.mp4"
+        />
+        <Section className="absolute top-0 left-0 bottom-0 w-full bg-black/50 !h-auto text-white">
+          <h3 className="text-xl font-extrabold tracking-wider">
+            WORK HARDER, GET STRONGER
+          </h3>
+          <h2 className="text-7xl font-black pt-7 pb-9 tracking-wide">
+            EASY WITH OUT <span className="text-orange-700">GYM</span>
+          </h2>
+          <Button text="BECOME A MEMBER" />
+        </Section>
+      </div>
       <Section>
         <SectionHeader
           heading={
@@ -126,27 +133,25 @@ const HomePage = () => {
               </div>
             ))}
           </div>
-          <div>
-            <table className="table-fixed w-full mt-10">
-              {schedule.map((item, index) => {
-                return (
-                  <tr key={index} className="group">
-                    <td className="p-5 border-l border-slate-700 border-t border-r group-last:border-b">
-                      {item.type}
-                    </td>
-                    <td className="p-5 border-t border-slate-700 border-b border-r">
-                      {item.slot1}
-                    </td>
-                    <td className="p-5 border-t border-slate-700 border-b border-r">
-                      {item.slot2}
-                    </td>
-                    <td className="p-5 border-t border-slate-700 border-b border-r">
-                      {item.trainer}
-                    </td>
-                  </tr>
-                );
-              })}
-            </table>
+          <div className="table table-fixed w-full mt-10">
+            {schedule.map((item, index) => {
+              return (
+                <div key={index} className="group table-row">
+                  <div className="table-cell p-5 border-l border-slate-700 border-t border-r group-last:border-b">
+                    {item.type}
+                  </div>
+                  <div className="table-cell p-5 border-t border-slate-700 border-r group-last:border-b">
+                    {item.slot1}
+                  </div>
+                  <div className="table-cell p-5 border-t border-slate-700 border-r group-last:border-b">
+                    {item.slot2}
+                  </div>
+                  <div className="table-cell p-5 border-t border-slate-700  border-r group-last:border-b">
+                    {item.trainer}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </Section>
