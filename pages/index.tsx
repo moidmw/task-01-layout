@@ -64,7 +64,7 @@ const HomePage = () => {
           </div>
         </div>
       </Section>
-      <Section>
+      <Section className="bg-[url('https://altcampus.github.io/training-studio/assets/media/cta-bg.jpg')] text-white">
         <SectionHeader
           heading={
             <>
