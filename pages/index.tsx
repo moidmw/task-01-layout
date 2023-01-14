@@ -29,7 +29,7 @@ const HomePage = () => {
           loop
           src="https://altcampus.github.io/training-studio/assets/media/gym-video.mp4"
         />
-        <Section className="absolute top-0 left-0 bottom-0 w-full bg-black/50 !h-auto text-white">
+        <Section className="absolute top-0 left-0 bottom-0 w-full !bg-black/50 !h-auto text-white">
           <h3 className="text-xl font-extrabold tracking-wider">
             WORK HARDER, GET STRONGER
           </h3>
@@ -39,27 +39,29 @@ const HomePage = () => {
           <Button text="BECOME A MEMBER" />
         </Section>
       </div>
-      <Section>
-        <SectionHeader
-          heading={
-            <>
-              Choose <span className="text-orange-700">Program</span>
-            </>
-          }
-          subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+      <Section className="!bg-white">
+        <div>
+          <SectionHeader
+            heading={
+              <>
+                Choose <span className="text-orange-700">Program</span>
+              </>
+            }
+            subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
           rem nostrum, deserun dolor delectus."
-        />
-        <div className="flex flex-row flex-wrap">
-          {programItems.map((item, index) => {
-            return (
-              <ProgramItem
-                key={index}
-                title={item.title}
-                description={item.description}
-                link={item.link}
-              />
-            );
-          })}
+          />
+          <div className="flex flex-row flex-wrap">
+            {programItems.map((item, index) => {
+              return (
+                <ProgramItem
+                  key={index}
+                  title={item.title}
+                  description={item.description}
+                  link={item.link}
+                />
+              );
+            })}
+          </div>
         </div>
       </Section>
       <Section>
