@@ -29,7 +29,7 @@ const HomePage = () => {
           loop
           src="https://altcampus.github.io/training-studio/assets/media/gym-video.mp4"
         />
-        <Section className="absolute top-0 left-0 bottom-0 w-full !bg-black/50 !h-auto text-white">
+        <Section className="absolute top-0 left-0 bottom-0 w-full !bg-black/50 text-white">
           <h3 className="text-xl font-extrabold tracking-wider">
             WORK HARDER, GET STRONGER
           </h3>
@@ -39,7 +39,7 @@ const HomePage = () => {
           <Button text="BECOME A MEMBER" />
         </Section>
       </div>
-      <Section className="!bg-white">
+      <Section>
         <div>
           <SectionHeader
             heading={
@@ -127,7 +127,7 @@ const HomePage = () => {
           </div>
         </div>
       </Section>
-      <Section>
+      <Section className="bg-[url('https://altcampus.github.io/training-studio/assets/media/schedule-bg.jpg')] text-white">
         <div>
           <SectionHeader
             heading={
@@ -177,12 +177,12 @@ const HomePage = () => {
             }
             subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem nostrum, deserunt eum dolor delectus."
           />
-          <div className="flex flex-row">
+          <div className="flex flex-row flex-wrap justify-center">
             {trainer.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className="flex basis-1/3 flex-col text-left bg-white p-6 m-5 rounded-lg shadow-sm"
+                  className="flex max-w-xs flex-col text-left p-6 m-5 rounded-lg shadow-md shadow-slate-300 flex-0"
                 >
                   <Image
                     src={item.profileImage}
