@@ -29,17 +29,19 @@ const HomePage = () => {
           loop
           src="https://altcampus.github.io/training-studio/assets/media/gym-video.mp4"
         />
-        <Section className="absolute top-0 left-0 bottom-0 w-full !bg-black/50 !h-auto text-white">
-          <h3 className="text-xl font-extrabold tracking-wider">
-            WORK HARDER, GET STRONGER
-          </h3>
-          <h2 className="text-7xl font-black pt-7 pb-9 tracking-wide">
-            EASY WITH OUT <span className="text-orange-700">GYM</span>
-          </h2>
-          <Button text="BECOME A MEMBER" />
+        <Section className="absolute top-0 left-0 bottom-0 w-full !bg-black/50 text-white">
+          <div>
+            <h3 className="text-xl font-extrabold tracking-wider">
+              WORK HARDER, GET STRONGER
+            </h3>
+            <h2 className="text-7xl font-black pt-7 pb-9 tracking-wide">
+              EASY WITH OUT <span className="text-orange-700">GYM</span>
+            </h2>
+            <Button text="BECOME A MEMBER" />
+          </div>
         </Section>
       </div>
-      <Section className="!bg-white">
+      <Section>
         <div>
           <SectionHeader
             heading={
@@ -91,32 +93,36 @@ const HomePage = () => {
           laudantium. Lorem ipsum dolor sit amet."
           />
           <div className="flex flex-row w-full">
-            <div className="flex flex-col basis-1/3">
+            <div className="flex flex-col basis-2/4 mr-10 flex-wrap">
               {ourClasses.map((item, index) => {
                 return (
-                  <div key={index} className="flex flex-row flex-wrap">
+                  <div
+                    key={index}
+                    className="flex flex-row w-full text-left shadow-md p-7 mb-8 items-center"
+                  >
                     <Image
+                      className="mr-4 w-9 h-9 flex"
                       src="https://altcampus.github.io/training-studio/assets/media/tabs-first-icon.png"
                       alt="image"
                       width="35"
                       height="35"
                     />
-                   <p className="font-semibold text-2xl">{item}</p>
+                    <p className="font-semibold text-2xl">{item}</p>
                   </div>
                 );
               })}
             </div>
-            <div className="w-full">
+            <div className="w-full text-left">
               <Image
                 src="https://altcampus.github.io/training-studio/assets/media/training-image-01.jpg"
                 alt="training image"
                 width="0"
                 height="0"
                 sizes="100vw"
-                className="w-full h-auto"
+                className="w-full h-auto mb-10"
               />
-              <Header text="First Training Class" />
-              <p className="my-4 font-extralight max-w-md mx-auto">
+              <p className="font-bold text-2xl">First Training Class</p>
+              <p className="my-4 font-extralight mx-auto">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
                 delectus unde at accusantium optio perspiciatis deserunt.
                 Ratione, iure praesentium tempora similique ut voluptatum
@@ -127,7 +133,7 @@ const HomePage = () => {
           </div>
         </div>
       </Section>
-      <Section>
+      <Section className="bg-[url('https://altcampus.github.io/training-studio/assets/media/schedule-bg.jpg')] text-white">
         <div>
           <SectionHeader
             heading={
@@ -177,12 +183,12 @@ const HomePage = () => {
             }
             subHeading="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem nostrum, deserunt eum dolor delectus."
           />
-          <div className="flex flex-row">
+          <div className="flex flex-row flex-wrap justify-center">
             {trainer.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className="flex basis-1/3 flex-col text-left bg-white p-6 m-5 rounded-lg shadow-sm"
+                  className="flex max-w-xs flex-col text-left p-6 m-5 rounded-lg shadow-md shadow-slate-300 flex-0"
                 >
                   <Image
                     src={item.profileImage}
